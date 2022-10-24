@@ -1,0 +1,170 @@
+@import url(fontes.css);
+@import url(reset.css);
+
+:root{
+  --unit: 14px;
+  --font-coll: 'Euripides-SemiBold_web';
+  --font-link: 'Euripides-SemiBold_web';
+  --font-doc: 'nadia_serif';
+  --color-nolink: navy;
+  --color-link: blue;
+  --color-bg: #e2dde4;
+  --color-main: black;
+  --color-td: LightGrey;
+  --color-abstr: #cfa4b725;
+  --color-abstr-h: #eca9a4ff;
+  --color-contType: #84b2ad3f;
+  --color-contType-h: #84b2adff;
+  --color-lang: #092b7a29;
+  --color-lang-h: #093e7a9d;
+  --color-crea: #ff07ff0c;
+  --color-crea-h: #e4c3ffff;
+}
+
+/*//////////// GENERAL //////////////*/
+html{
+  font-size: calc(var(--unit) * 1.5);
+  /* font-family: 'Coconat-Regular'; */
+	background-color: var(--color-bg);
+	padding: 2%;
+}
+
+li::marker{
+  content: "";
+}
+
+/*//////////// COLLECTION //////////////*/
+.collection{
+  font-family: var(--font-coll);
+  line-height: 2em;
+  text-transform:Uppercase;
+  width: 100%;
+}
+
+  .titleColl{
+    font-size: calc(var(--unit) * 1.8);
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+    text-decoration-color: var(--color-link);
+  }
+
+  .titleSubColl{
+    font-size: calc(var(--unit) * 1.8);
+    padding-left: 2%;
+    text-decoration: none;
+  }
+
+  .titleSubColl:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+    text-decoration-color: var(--color-link);
+  }
+
+/*//////////// DOCUMENT //////////////*/
+.documents{
+  line-height: 1.8em;
+  width: 70%;
+  color: transparent;
+  font-family: var(--font-doc);
+  font-size: calc(var(--unit) * 2);
+  }
+
+span{
+  display: inline;
+  text-decoration-thickness: 0.5rem;
+  text-decoration-line: underline;
+}
+
+.titleNoLink,
+a.titleLink{
+  font-family: var(--font-link);
+  color: var(--color-main);
+  text-decoration: none;
+}
+
+  /* .contentType, */
+  .publisher,
+  .blogTitle,
+  .websiteTitle,
+  .publicationTitle,
+  .publicationTitle,
+  /* .abstract, */
+  .abstractNote,
+  /* .langue, */
+  /* .creators,
+  .creatorsName, */
+  /* .titleDoc */
+  {
+    text-decoration-color: var(--color-td);
+  }
+
+  .abstract,
+  .abstractNote{
+    text-decoration-color: var(--color-abstr);
+  }
+
+  /* .abstractNote{
+    font-family: var(--font-doc);
+  } */
+
+  .contentType{
+    text-decoration-color: var(--color-contType);
+  }
+
+  .langue{
+    text-decoration-color: var(--color-lang);
+  }
+
+  .creators,
+  .creatorsName{
+    text-decoration-color: var(--color-crea);
+  }
+
+/*//////////// HOVER DOCUMENT //////////////*/
+.document:hover > span{
+  color: var(--color-main);
+}
+
+.titleNoLink:hover,
+a.titleLink:hover{
+  text-decoration-thickness: 0.5rem;
+  text-decoration-line: underline;
+}
+
+.titleNoLink:hover{
+  text-decoration-color: var(--color-nolink);
+}
+
+a.titleLink:hover{
+  text-decoration-color: var(--color-link);
+}
+
+  .document:hover > a.titleLink{
+    text-decoration-color: var(--color-link);
+    text-decoration-thickness: 0.5rem;
+    text-decoration-line: underline;
+  }
+  .document:hover > span.titleNoLink{
+    text-decoration-color: var(--color-nolink);
+    text-decoration-thickness: 0.5rem;
+    text-decoration-line: underline;
+  }
+  .document:hover > span.contentType{
+    text-decoration-color: var(--color-contType-h);
+  }
+  .document:hover > span.langue{
+    text-decoration-color: var(--color-lang-h);
+  }
+  .document:hover > span.creators{
+    text-decoration-color: var(--color-crea-h);
+  }
+  .document:hover > span.abstract{
+    text-decoration-color: var(--color-abstr-h);
+  }
+
+/*//////////// ATTACHEMENT //////////////*/
+.attachments{
+  background-color: whitesmoke;
+  float: left;
+  width: 30%;
+}
