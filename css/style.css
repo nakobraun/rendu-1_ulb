@@ -33,8 +33,9 @@ li::marker{
   content: "";
 }
 
-span#presentation{
+p#presentation{
   font-family: var(--font-doc);
+  display: inline;
 }
 
 /*//////////// COLLECTION //////////////*/
